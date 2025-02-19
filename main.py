@@ -3,8 +3,10 @@ from pymongo import MongoClient
 from bson import ObjectId
 from bson.errors import InvalidId
 from datetime import datetime
+from flask-cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Configurar MongoDB Atlas
 client = MongoClient("mongodb+srv://honoka:honoka343@flaskapi.rvw7w.mongodb.net/")
